@@ -13,3 +13,7 @@ const myfunc = function(){
 }
 
 console.log(typeof myfunc);
+
+// In primitive data type stack memory is used while in non-primitive heap memory is used.
+
+// When using heap memory is allocated using reference. In stack copy is stored.
