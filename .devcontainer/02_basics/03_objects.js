@@ -1,9 +1,10 @@
-// Singleton -> Whenever you create using constructor singleton is obtained. If literal is used o declare object then no 
-// no singleton formed.
+// Singleton -> Whenever you create using constructor singleton is obtained. If literal is used to declare object then no 
+// singleton formed.
 
-// Object literals
 
 const mysym = Symbol("key1")
+
+// Object literals
 
 const JSuser = {
     name : "Aman",
