@@ -50,3 +50,28 @@ console.log(Object.values(fbUser))
 console.log(Object.entries(fbUser)) // Here array of key value pairs is generated.
 
 console.log(fbUser.hasOwnProperty('isLoggedIn')); // Returns whether a property is present inside an object.
+
+
+/* 
+  ************************
+ |Destructuring of objects|
+  ************************
+*/
+
+const gamer = {
+    gameName : "God of War",
+    gamePrice : 1500,
+    availableAt : "Steam"
+}
+
+const {gameName : game} = gamer
+
+console.log(game)
+
+// Concept of API's -->
+
+// API's are just like something where you don't have to do anything but the API you copied will do the task.
+
+// The object which is without name is called JSON. Here the keys will always act as a string.
+
+// Mostly API's return objects but sometimes they might also return arrays.
