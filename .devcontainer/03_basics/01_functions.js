@@ -41,3 +41,9 @@ handleObj(user)
 // Passing arrays -->
 
 const myarr = [200, 400, 100, 600]
+
+function return2ndvalue(getarray){
+    return getarray[1];
+}
+
+console.log(return2ndvalue(myarr))
