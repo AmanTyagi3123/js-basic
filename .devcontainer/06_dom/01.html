@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Learning</title>
+    <style>
+        bg-black{
+            background-color: #212121;
+            color : #fff;
+        }
+    </style>
 </head>
 <body>
     <div class="bg-black">
@@ -12,3 +18,54 @@
     </div>
 </body>
 </html>
+
+<!-- 
+
+There are various elements of html which are commonly used :-
+document.getElementById('title') :-  Used to get the element according to its ID.
+Using the above syntax we can easily make use of certain objects.
+
+For eg -> To get class from the getElementById property :-
+getElementById('title').className
+document.getElementById('title').getAttribute('id')
+document.getElementById('title').getAttribute('class')
+
+For setting class name of a particular id object :- 
+document.getElementById('title').setAttribute('class', 'test') :- This will always overwrite the current class name.
+
+const title = document.getElementById('title') :- Used to store the object corresponding to that id.
+
+Now we can perform various tasks on this title.
+
+title.style.backgroundColor = 'green' :- Style is changed to acquiring bg-color as green.
+
+3 ways to access values from this title :-
+1.) textContent :- If any text dislay is set to none then also it is shown.
+2.) innerHTML :- Also, it accesses whole of the inner HTML code.
+3.) innerText :- If any text display is set to none then it will not be shown.
+
+ ****
+|Note| -> Here, document.getElementsByClassName('heading') returns you an HTML Collection and not the array of collections.
+ ****
+
+ ****
+|Imp.| -> document.querySelector('h2') :- Used to select the very first h2. 
+ ****
+
+ In query selector the same way as we used to use selector is used.
+
+ We can use it to for DOM manipulation like :- 
+ const myul = document.querySelector('ul')
+ const turnGreen = myul.querySelector('li')
+ turnGreen.style.backgroundColor = "green"
+
+ We can also use querySelectorAll for accessing all values of a particular selector.
+ ***
+|Imp| :- The data is returned in the form of NodeList. This is not an array which is imp. to understand.
+ ***
+
+ In HTML collection loops cannot be used and hence conversion into array becomes neccesity.
+
+ Array.from(object you want to convert.)
+
+-->
