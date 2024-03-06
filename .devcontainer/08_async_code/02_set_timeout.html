@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    const changeMe = setTimeout(function(){
+        console.log("Aman");
+    }, 2000); // Here, after 2 seconds this task is performed.
+    // If instead of setTimeout() we would have used setInterval() then the rquired task will be executed over and over 
+    // again after same time.
+    
+    const btn = document.querySelector('#stop');
+    btn.addEventListener('click', function(){
+        clearTimeout(changeMe);
+    })
+    // This allows us to clear the functionality achieved using setTimeout().
+</script>
+</html>
