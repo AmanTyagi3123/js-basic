@@ -14,9 +14,11 @@ const body = document.querySelector('body');
 let changeIt;
 document.querySelector('#start')
 .addEventListener('click',function(){
-    changeIt = setInterval(function(){
-        body.style.backgroundColor = randomColor()
-    },1000);
+    if(!changeIt){
+        changeIt = setInterval(function(){
+            body.style.backgroundColor = randomColor()
+        },1000);
+    }
 })
 
 document.querySelector('#stop')
