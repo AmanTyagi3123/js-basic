@@ -1,6 +1,6 @@
 // Creating function for selecting random color -->
 
-function randomColor(){
+const randomColor = function(){
     const str = "0123456789ABCDEF";
     let random = '#';
 
@@ -22,5 +22,5 @@ document.querySelector('#start')
 document.querySelector('#stop')
 .addEventListener('click',function(){
     clearInterval(changeIt);
-    changeIt = NULL;
+    changeIt = null;
 })
