@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in.
+    0 -> UNSENT -> client has been created. open() not called yet.
+    1 -> OPENED -> open() has been called.
+    2 -> HEADERS_RECEIVED -> send() has been called, and headers and status are available
+    3 -> LOADING -> Downloading; responseText holds partial data.
+    4 -> DONE -> The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    // The below method is used for sending and receiving data 
+    const xhr = new XMLHttpRequest(); // XMLHttpRequest is basically a class so we would have to create an object.
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function(){ // This helps us track the change of state.
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            // Whenever you get a responseText it comes in the form of the string. Therefore, we converted it to JSON.
+            console.log(data.followers);
+        }
+    }
+    xhr.send();
+
+    // A very interesting fact is that console.log which we use quiet often is a dev tool but not real part of Js.
+    // Actually, one of the many engines used to implement JS, V8 engine, has a d8 folder in which the implementation
+    // of JS is done using cpp. This is a very interesting thing to know as I was very keen on knowing that how JS was
+    // implemented and knowing that it was implemented using my favourite language cpp is extremely delightful.
+</script>
+</html>
